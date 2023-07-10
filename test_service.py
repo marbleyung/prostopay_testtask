@@ -28,7 +28,7 @@ async def db_session():
 
 
 @pytest.mark.asyncio
-async def test_add_get_user(db_session):
+async def test_add_and_get_user(db_session):
     await User.add(db_session, username='testuser1', name='John Doe')
     result = await User.get(db_session, username='testuser1')
 
